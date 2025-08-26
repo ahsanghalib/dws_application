@@ -1051,14 +1051,7 @@ const DragDropBoxes = () => {
                   ) : (
                     <span
                       style={{
-                        fontSize: Math.max(
-                          windowWidth < 640
-                            ? 8
-                            : windowWidth < 1024
-                              ? 10
-                              : box.fontSize,
-                          box.fontSize,
-                        ),
+                        fontSize: newFontSize,
                         lineHeight: "1.2",
                       }}
                       className="text-center px-1 break-words leading-tight"
