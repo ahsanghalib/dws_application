@@ -751,30 +751,6 @@ const DragDropBoxes = () => {
               </div>
             </div>
           </div>
-
-          {/* {selectedBox && ( */}
-          {/*   <div */}
-          {/*     className={`text-xs sm:text-sm font-medium p-2 sm:p-3 rounded-md border ${ */}
-          {/*       isDarkTheme */}
-          {/*         ? "text-blue-300 bg-blue-900/30 border-blue-700" */}
-          {/*         : "text-blue-600 bg-blue-50 border-blue-200" */}
-          {/*     }`} */}
-          {/*   > */}
-          {/*     <span className="font-semibold"> */}
-          {/*       Box {selectedBox.toString().slice(0, 2).toUpperCase()} selected. */}
-          {/*     </span>{" "} */}
-          {/*     <span className="hidden sm:inline"> */}
-          {/*       {isDragging */}
-          {/*         ? "Dragging..." */}
-          {/*         : "Click and drag to move, double-click to edit text."} */}
-          {/*     </span> */}
-          {/*     <span className="sm:hidden"> */}
-          {/*       {isDragging */}
-          {/*         ? "Dragging..." */}
-          {/*         : "Tap to edit, long press to delete."} */}
-          {/*     </span> */}
-          {/*   </div> */}
-          {/* )} */}
         </div>
 
         <div className="flex flex-col lg:flex-row gap-4 lg:gap-6">
@@ -940,6 +916,45 @@ const DragDropBoxes = () => {
                 >
                   Save
                 </Button>
+              </div>
+
+              <div className="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t">
+                {selectedBox && (
+                  <div
+                    className={`text-xs sm:text-sm font-medium p-2 sm:p-3 rounded-md border ${
+                      isDarkTheme
+                        ? "text-blue-300 bg-blue-900/30 border-blue-700"
+                        : "text-blue-600 bg-blue-50 border-blue-200"
+                    }`}
+                  >
+                    <span className="font-semibold">
+                      Box {selectedBox.toString().slice(0, 2).toUpperCase()}{" "}
+                      selected.
+                    </span>{" "}
+                    <span className="hidden sm:inline">
+                      {isDragging
+                        ? "Dragging..."
+                        : "Click and drag to move, double-click to edit text."}
+                    </span>
+                    <span className="sm:hidden">
+                      {isDragging
+                        ? "Dragging..."
+                        : "Tap to edit, long press to delete."}
+                    </span>
+                  </div>
+                )}
+              </div>
+
+              <div className="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t">
+                <div
+                  className={`text-xs sm:text-sm font-medium p-2 sm:p-3 rounded-md border ${
+                    isDarkTheme
+                      ? "text-blue-300 bg-blue-900/30 border-blue-700"
+                      : "text-blue-600 bg-blue-50 border-blue-200"
+                  }`}
+                >
+                  <span className="font-semibold">by Knight XIII</span>
+                </div>
               </div>
             </div>
           </div>
